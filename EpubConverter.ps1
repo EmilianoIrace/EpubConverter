@@ -9,7 +9,7 @@ $input_path = ".\$input_filename"
 $output_path = ".\$output_filename"
 
 # Run the ebook-convert command to extract the contents of the EPUB file
-pandoc -M document-css=false --extract-media .\ -o .\NewBook.md -i $input_path
+pandoc -M document-css=false --extract-media ./Images -o .\NewBook.md -i $input_path
 
 # Run the modified_EpubConverter.py script to replace the text in the output file
 python EpubConverter.py $output_path
